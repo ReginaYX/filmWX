@@ -1,0 +1,257 @@
+/* pages/time/time.wxss */
+.timePage{
+  box-sizing: border-box;
+  border-radius: 20rpx 20rpx 0 0;
+  padding: 0 28rpx;
+  background: #fff;
+  min-height: 100vh;
+  padding-top: 30rpx;
+}
+
+/* tab栏 */
+.timeTabBox{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(151,151,151,0.3);
+}
+
+.timeTabBox .timeTab{
+  padding: 0 14rpx;
+  height:80rpx;
+  font-size:32rpx;
+  color:#999;
+  line-height:80rpx;
+  text-align: center;
+  margin-right: 18rpx;
+  position: relative;
+}
+
+.timeTabBox .timeTab:after{
+  position: absolute;
+  width:0;
+  height:4rpx;
+  background:rgba(254,105,13,1);
+  content: '';
+  bottom: -1rpx;
+  left: 0;
+}
+
+.timeTabBox .timeTab.active{
+  color:rgba(0,0,0,1);
+  font-weight: bold;
+}
+
+.timeTabBox .timeTab.active:after{
+  width: 100%;
+}
+
+/* 滑块 */
+.tabSwiperBox{
+  height: calc(100vh - 140rpx);
+  padding-top: 12rpx;
+}
+
+.tabSwiperBox .bigBox{
+  height: 100%;
+  overflow-y: scroll;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.tabSwiperBox .goBox{
+  box-shadow: 0 0 14rpx 4rpx rgba(108,111,192,0.1);
+  height:260rpx;
+  background:rgba(255,255,255,1);
+  border-radius:4rpx;
+  width: 98%;
+  margin: 22rpx auto 0;
+  padding: 20rpx 0 0;
+}
+
+.tabSwiperBox .goBox .goTitle{
+  height:38rpx;
+  border-left:10rpx solid rgba(254,105,13,1);
+  padding-left: 26rpx;
+  font-size:30rpx;
+  color:rgba(0,0,0,1);
+  line-height:38rpx;
+  font-weight: bold;
+}
+
+.tabSwiperBox .goBox .goContentBox{
+  padding: 32rpx 20rpx 0;
+}
+
+.tabSwiperBox .goContentBox .goInfoBox{
+  border-bottom: 1px solid rgba(151,151,151,0.2);
+  padding: 0 8rpx;
+}
+
+.tabSwiperBox .goContentBoxNd .goInfoBox{
+  border-bottom: none;
+}
+
+.tabSwiperBox .goContentBox .goInfoBox .goInfo{
+  display: flex;
+  align-items: center;
+  margin-bottom: 22rpx;
+}
+
+.tabSwiperBox .goContentBox .goInfoBox .none{
+  display: none
+}
+
+.tabSwiperBox .goContentBox .goInfoBox .goInfo icon{
+  font-size: 32rpx;
+  color: #6C6FC0;
+  margin: -10rpx 12rpx 0 0;
+}
+
+.tabSwiperBox .goContentBox .goInfoBox .goInfo:last-child icon{
+  color: #F45258;
+}
+
+.tabSwiperBox .goContentBox .goInfoBox .goInfo .goInfoTxt{
+  font-size:26rpx;
+  color:rgba(58,67,89,1);
+}
+
+.tabSwiperBox .goContentBox .goInfoBox .goInfo .goInfoTxt text{
+  font-size:26rpx;
+  color:#000;
+}
+
+.tabSwiperBox .goContentBox .remark{
+  line-height: 70rpx;
+  color:rgba(58,67,89,1);
+  font-size: 26rpx;
+  padding: 0 8rpx;
+}
+
+.tabSwiperBox .goContentBox .remark text{
+  color:#000;
+  font-size: 26rpx;
+}
+
+/* 化妆时间 */
+.tabSwiperBox .goBox.goBoxNd{
+  /* max-height: 230rpx; */
+  min-height: 180rpx;
+  height: auto;
+}
+
+.tabSwiperBox .goBox .goContentBox.goContentBoxNd{
+ padding: 32rpx 20rpx 20rpx;
+}
+
+.tabSwiperBox .goBox .goTitleBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 18rpx;
+}
+
+.tabSwiperBox .goBox .hr{
+  background: rgba(151,151,151,0.2);
+  width: calc(100% - 40rpx);
+  margin: 0 auto;
+  height: 1px;
+}
+
+.tabSwiperBox .goBox .goTitle text{
+  color: #666;
+  font-weight: normal;
+}
+
+.tabSwiperBox .goBox .goTimeBox{
+  display: flex;
+  align-items: center;
+  margin-right: 35rpx
+}
+
+.tabSwiperBox .goBox .goTimeBox icon{
+  font-size: 32rpx;
+  color: #6C6FC0;
+  margin: -10rpx 12rpx 0 0;
+}
+
+.tabSwiperBox .goBox .goTimeBox .goTime{
+  font-size:26rpx;
+  color:rgba(58,67,89,1);
+}
+
+.tabSwiperBox .goBox .goTimeBox .goTime text{
+  font-size:28rpx;
+  color:#000;
+}
+
+/* 通讯录 */
+.tabSwiperBox .contactBox{
+  height:246rpx;
+  background:rgba(255,255,255,1);
+  border-radius:4rpx;
+  box-shadow: 0 0 14rpx 4rpx rgba(108,111,192,0.1);
+  padding: 0 20rpx;
+  width: 98%;
+  margin: 22rpx auto 0;
+  box-sizing: border-box;
+  
+}
+
+.tabSwiperBox .contactBox .contactTopBox{
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 10rpx;
+  border-bottom:1px solid rgba(151,151,151,0.3);
+}
+
+.tabSwiperBox .contactBox .contactTopBox .contactInfoBox{
+  display: flex;
+  align-items: center;
+  width:calc(100% - 100rpx);
+}
+
+.tabSwiperBox .contactBox .contactInfoBox .contactHead{
+  width:108rpx;
+  height:108rpx;
+  background:rgba(244,82,88,1);
+  border-radius: 50%;
+  margin-right: 34rpx;
+  font-size:50rpx;
+  font-weight: bold;
+  text-align: center;
+  line-height: 108rpx;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.tabSwiperBox .contactBox .contactInfoBox .contactTxt{
+  font-size:34rpx;
+  color:rgba(0,0,0,1);
+  line-height:48rpx;
+}
+
+.tabSwiperBox .contactBox .contactInfoBox .contactTxt text{
+  font-size:28rpx;
+  color:#666666;
+  margin-top: 12rpx;
+  display: block;
+  line-height:40rpx;
+}
+
+.tabSwiperBox .contactBox .contactTopBox .phoneBox{
+  width:44rpx;
+  height:44rpx;
+  margin-right: 25rpx;
+}
+
+.tabSwiperBox .contactBox .phoneInfo{
+  line-height: 72rpx;
+  font-size:28rpx;
+  color:#686868;
+  padding: 0 10rpx;
+}
+
+.tabSwiperBox .contactBox .phoneInfo text{
+  color:rgba(108,111,192,1);
+}

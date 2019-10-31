@@ -1,0 +1,53 @@
+<!--pages/mine/mine.wxml-->
+<view class='bg'></view>
+<view class='mineBox'>
+  <view class='mineContentBox'>
+    <image src='{{user_info.profile_picture}}' class='mineHead' wx:if='{{user_info.profile_picture!=undefined}}'></image>
+    <view class='mineHead' wx:else>{{user_info.shortName}}</view>
+    <view class='mineInfo'>
+      <view class='mineName'>{{user_info.name}}</view>
+      <view class='sexBox'>性别：
+        <icon class='iconfont iconnv' wx:if='{{user_info.sex == 2}}'></icon>
+        <icon class='iconfont iconnan1' wx:else></icon>
+      </view>
+    </view>
+  </view>
+  <view class='mineItemBox'>
+    <view class='mineItem'>当前剧组：<text>{{project_info.project_name}}</text></view>
+    <view class='mineItem'>所属部门：<text>{{project_info.department_name}}</text></view>
+  </view>
+</view>
+
+<view class='mineSetBox'>
+  <view class='mineSet' bindtap="toGroup">
+    <view class='setTitle'>
+      <icon class='iconfont iconxiangmu'></icon>我的剧组
+    </view>
+    <icon class='enter iconfont icongengduo1'></icon>
+  </view>
+  <view class='mineSet' bindtap="toHistory">
+    <view class='setTitle'>
+      <icon class='iconfont icondrxx20'></icon>我的历程
+    </view>
+    <icon class='enter iconfont icongengduo1'></icon>
+  </view>
+  <view class='hr'></view>
+  <view class='mineSet' bindtap="toSetting">
+    <view class='setTitle'>
+      <icon class='iconfont iconanquan'></icon>安全设置
+    </view>
+    <icon class='enter iconfont icongengduo1'></icon>
+  </view>
+  <view class='mineSet' bindtap="tofeedback">
+    <view class='setTitle'>
+      <icon class='iconfont iconyijianfankui'></icon>意见反馈
+    </view>
+    <icon class='enter iconfont icongengduo1'></icon>
+  </view>
+  <!-- <view class='mineSet'>
+    <view class='setTitle'>
+      <icon class='iconfont iconguanyuwomen'></icon>关于我们
+    </view>
+    <icon class='enter iconfont icongengduo1'></icon>
+  </view> -->
+</view>

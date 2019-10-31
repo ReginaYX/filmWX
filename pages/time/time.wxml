@@ -1,0 +1,93 @@
+<!--pages/time/time.wxml-->
+<wxs module="filter" src="../../utils/util.wxs"></wxs>
+<view class='timePage'>
+<view class='timeTabBox'>
+  <view class='{{index==0 ? "timeTab active" : "timeTab"}}' bindtap='swiperChange' data-index="0">出发时间</view>
+  <view class='{{index==1 ? "timeTab active" : "timeTab"}}' bindtap='swiperChange' data-index="1">化妆时间</view>
+  <view class='{{index==2 ? "timeTab active" : "timeTab"}}' bindtap='swiperChange' data-index="2">通讯录</view>
+</view>
+<swiper bindchange="swiperChange" current="{{index}}" class='tabSwiperBox'>
+  <swiper-item class='tabSwiper'>
+    <view wx:if='{{goList[0].department!=undefined}}' class='bigBox'>
+      <view class='goBox' wx:for='{{goList}}' wx:key="index" wx:for-item="item" wx:for-index="key">
+        <view class='goTitle'>{{item.department}}</view>
+        <view class='goContentBox'>
+          <view class='goInfoBox'>
+            <view class='goInfo'>
+              <icon class='iconfont iconlipeishijian'></icon>
+              <view class='goInfoTxt'>出发时间：<text>{{item.departure}}</text></view>
+            </view>
+            <view class='goInfo'>
+              <icon class='iconfont icondingweiweizhi'></icon>
+              <view class='goInfoTxt'>出发地点：<text>{{item.location}}</text></view>
+            </view>
+          </view>
+          <view class='remark' wx:if='{{item.remark==undefined}}'>备注：<text>暂无备注</text></view>
+          <view class='remark' wx:else>备注：<text>{{item.remark}}</text></view>
+        </view>
+      </view>
+    </view>
+    <view wx:else>
+      <view class='nullBox'>
+        <icon class='iconfont iconwuxinxi'></icon>暂无当日出发时间
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+   <view wx:if='{{dressList[0].role_name!=undefined}}' class='bigBox'>
+    <view class='goBox goBoxNd' wx:for='{{dressList}}' wx:key="index" wx:for-item="item" wx:for-index="key">
+      <view class='goTitleBox'>
+        <view class='goTitle'>{{item.role_name}}<text wx:if='{{item.actor_name!=undefined}}'>【{{item.actor_name}}】</text></view>
+        <view class='goTimeBox' wx:if='{{item.departure!=undefined}}'>
+          <icon class="iconfont iconlipeishijian"></icon>
+          <view class='goTime'>出发时间：<text>{{item.departure}}</text></view>
+        </view>
+      </view>
+      <view class='hr'></view>
+      <view class='goContentBox goContentBoxNd'>
+        <view class='goInfoBox'>
+          <view class='goInfo'>
+            <view class='goInfoTxt'>是否现场化妆：
+              <text wx:if='{{item.shot==undefined}}'>暂无化妆信息</text>
+              <text wx:elif='{{item.shot=="1"}}'>现场化妆</text>
+              <text wx:elif='{{item.shot=="0"}}'>非现场化妆</text>
+            </view>
+          </view>
+          <view class='{{item.makeup_time==""||item.makeup_time==undefined||item.makeup_time==" "?"none":"goInfo"}}'>
+            <view class='goInfoTxt'>化妆时间：<text>{{item.makeup_time}}</text></view>
+          </view>
+        </view>
+      </view>
+    </view>
+   </view>
+   <block wx:else>
+      <view class='nullBox'>
+        <icon class='iconfont iconwuxinxi'></icon>暂无当日化妆信息
+      </view>
+    </block>
+  </swiper-item>
+   <swiper-item>
+   <view wx:if='{{contactList[0].name!=undefined}}' class='bigBox'>
+    <view class='contactBox' wx:for='{{contactList}}' wx:key="index" wx:for-item="item" wx:for-index="key">
+      <view class='contactTopBox'>
+        <view class='contactInfoBox'>
+          <view class='contactHead' style="background:{{item.color}}">{{filter.substring(item.post)}}</view>
+          <view class='contactTxt'>
+            {{item.post}}<text>{{item.name}}</text>
+          </view>
+        </view>
+        <image class='phoneBox' data-num='{{item.phone}}' bindtap="callPhone" src='../../images/phoneIcon.png'></image>
+      </view>
+      <view class='phoneInfo'>
+        联系电话：<text>{{filter.toHide(item.phone)}}</text>
+      </view>
+    </view>
+   </view>
+   <block wx:else>
+      <view class='nullBox'>
+        <icon class='iconfont iconwuxinxi'></icon>暂无当日通讯录
+      </view>
+    </block>
+  </swiper-item>
+</swiper>
+</view>

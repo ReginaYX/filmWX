@@ -1,0 +1,27 @@
+<!--pages/register/register.wxml-->
+<view class='pageBox'>
+<image src="../../images/logo.png" class='logo' mode='widthFix'></image>
+<view class='logoTitle'>
+  <view class='hr'></view>
+  <text>安全高效的制片管理平台</text>
+  <view class='hr'></view>
+</view>
+<form bindsubmit="formSubmit" bindreset="formReset" class='formBox logForm'>
+  <view class="inputBox">
+    <input name="phone" placeholder="请输入手机号" confirm-type='next'  placeholder-class='inputPlaceholder' 
+    value="{{phone}}" bindinput="phoneInput"/>
+    <icon class="iconfont iconcuohao" bindtap="formReset" wx:if='{{emptyBtn}}'></icon>
+  </view>
+  <view class="inputBox">
+    <input name="code" placeholder="请输入验证码" confirm-type='done'  placeholder-class='inputPlaceholder' />
+    <view class='inputCode' wx:if="{{codeTime != 0}}">{{codeTime}}秒后重新获取</view>
+    <view class="inputCode" bindtap="sendCode" wx:else>获取验证码</view>
+  </view>
+  <view class="inputBox">
+    <input name="password" placeholder="请输入密码" confirm-type='done'  placeholder-class='inputPlaceholder' password='true'/>
+  </view>
+  <view class='registerDesc'>已有账号，立即<text bindtap="tologin">登录</text></view>
+  <button form-type="submit" class='active'>注册</button>
+</form>
+<image src="../../images/bottomBg.png" class='bottomBg' mode='widthFix'></image>
+</view>

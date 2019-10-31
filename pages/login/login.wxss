@@ -1,0 +1,47 @@
+/* pages/login/login.wxss */
+.pageBox{
+  padding: 100rpx 90rpx 0;
+  background: #fff;
+  border-radius: 0;
+}
+
+.logoTitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 120rpx;
+}
+
+.logoTitle .hr{
+  width: 30rpx;
+  height: 2rpx;
+  background: #000
+}
+
+.logoTitle text{
+  font-size:30rpx;
+  color:rgba(0,0,0,1);
+  letter-spacing:2rpx;
+  margin: 0 20rpx;
+}
+
+.descBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16rpx;
+}
+
+.registerDesc{
+  font-size:28rpx;
+  color:rgba(0,0,0,1);
+}
+
+.registerDesc text{
+  color: #6C6FC0
+}
+
+.descBox .forget{
+  font-size:26rpx;
+  color:#777D8C;
+}

@@ -1,0 +1,5 @@
+<!--pages/notice/notice.wxml-->
+<view class='pageBg'></view>
+<view class='pageBox'>
+<image src="{{url}}" bindtap="img" mode="widthFix"></image>
+</view>

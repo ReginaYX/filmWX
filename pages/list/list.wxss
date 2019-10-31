@@ -1,0 +1,109 @@
+/* pages/list/list.wxss */
+.pageBox{
+  padding: 50rpx 28rpx;
+}
+
+.listTitle{
+  width: 60%;
+  height:50rpx;
+  font-size:36rpx;
+  font-weight:600;
+  color:rgba(0,0,0,1);
+  line-height:50rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  margin-bottom: 8rpx;
+}
+
+.listBox{
+  height: calc(100vh - 160rpx);
+}
+
+.listBox .timeBox{
+  width: 100%;
+  margin: 22rpx 0 0;
+  height: 164rpx;
+  position: relative;
+}
+
+.listBox .timeBox:last-of-type{
+  margin-bottom: 22rpx
+}
+
+.listBox .timeBox .dayNum{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width:108rpx;
+  height:112rpx;
+  background:rgba(123,212,185,1);
+  border-radius:8rpx;
+  font-size: 24rpx;
+  color: #fff;
+  line-height: 112rpx;
+  text-align: center;
+}
+
+.listBox .timeBox .dayNum.wait{
+  background:rgba(251,121,138,1);
+}
+
+.listBox .timeBox .dayNum.null{
+  background:rgba(255,233,186,1);
+  color: #3A4359
+}
+
+.listBox .timeBox .dayNum text{
+  font-size: 40rpx
+}
+
+.listBox .timeBox .contentBox{
+  width: calc(100% - 60rpx);
+  height: 100%;
+  margin: 0 6rpx 0 54rpx;
+  background: #fff;
+  border-radius:4rpx;
+  box-shadow: 0 0 14rpx 4rpx rgba(108,111,192,0.1);
+  padding: 34rpx 34rpx 0 92rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.listBox .timeBox .contentBox .leftBox{
+  width: 60%;
+  padding-top: 6rpx;
+  box-sizing: border-box;
+}
+
+.listBox .timeBox .contentBox .leftBox .leftItem{
+  display: flex;
+  align-items: center;
+  font-size:26rpx;
+  color:rgba(58,67,89,1);
+  margin-bottom: 28rpx;
+  height: 32rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.listBox .timeBox .contentBox .leftBox .leftItem icon{
+  color: #FE690D;
+  font-size: 32rpx;
+  margin: -12rpx 12rpx 0 0;
+}
+
+.listBox .timeBox .contentBox .leftBox .leftItem:first-child icon{
+  margin-top: -14rpx;
+}
+
+.listBox .timeBox .contentBox .status{
+  font-size: 24rpx;
+  color: #ACACAC;
+}

@@ -1,0 +1,210 @@
+.mineHistoryBox{
+  width: 100%;
+  padding: 20rpx 40rpx 0;
+  box-sizing: border-box;
+  position: relative;
+}
+.mineHistoryBox .bigInput{
+  width: 100%;
+  height: 70rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 100rpx;
+  margin-bottom: 20rpx;
+  background: #fff;
+  padding-left: 30rpx;
+  font-size: 12pt;
+  box-sizing: border-box;
+}
+.mineHistoryBox .inputPlaceholder{
+  /* padding-left: 40rpx; */
+  
+}
+.mineHistoryBox .inputIcon{
+  position: absolute;
+  top: 28rpx;
+  right: 60rpx;
+  z-index: 200;
+  width: 50rpx;
+  height: 50rpx;
+}
+.mineHistoryBox .empty{
+  line-height: 800rpx;
+  text-align: center;
+  color: #aaa;
+  font-size: 13pt;
+  letter-spacing: 3rpx;
+}
+.mineHistoryBox .mineHistory,
+.mineHistoryBox .mineAddBox{
+  width: 100%;
+  height: 300rpx;
+  background: #fff;
+  border: 1rpx solid #ddd;
+  border-radius: 10rpx;
+  box-shadow: 0 0 10rpx 6rpx rgba(0,0,0,.04);
+  padding: 0 30rpx 0 44rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+.mineHistoryBox .mineAddBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10pt;
+  color: #666;
+}
+.mineHistoryBox .mineAddBox image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-bottom: 18rpx;
+}
+.mineHistoryBox .mineHistory{
+  padding: 20rpx 30rpx;
+  padding-right: 40rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mineHistoryBox .mineHistory image{
+  width: 220rpx;
+  height: 250rpx;
+  border-radius: 10rpx;
+  margin-right: 30rpx;
+  background: #f6ae45;
+  flex-shrink: 0;
+}
+.mineHistoryBox .mineHistory text{
+  font-size: 12pt;
+  color: #333;
+  display: block;
+  margin-bottom: 20rpx;
+}
+.mineHistoryBox .mineHistory .mineHistoryName{
+  font-size: 15pt;
+}
+.mineHistoryBox .mineHistory text.mineHistoryTime{
+  color: #666;
+  font-size: 10pt;
+  margin-bottom: 0;
+  line-height: 36rpx;
+}
+.addGroupBox{
+  z-index: 2;
+  width: 500rpx;
+  height: 350rpx;
+  background-color: #fff;
+  position: absolute;
+  left: 17%;
+  top: 30%;
+  /* box-shadow: 10rpx 10rpx 10rpx #e1e1e1; */
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.addGroupBox .groupBox{
+  width: 500rpx;
+  height: 350rpx;
+  position: relative;
+}
+.addGroupBox .groupBox .boxTitle{
+  height: 70rpx;
+  width: 100%;
+  background: #f6ae45;
+}
+.addGroupBox .groupBox .close {
+    position: absolute;
+    top: 16rpx;
+    right: 28rpx;
+    color: #cbcbcb;
+    border-radius: 12rpx;
+    line-height: 40rpx;
+    text-align: center;
+    height: 40rpx;
+    width: 40rpx;
+    font-size: 24rpx;
+    padding: 1rpx;    
+}
+/* use cross as close button */
+/* .addGroupBox .groupBox .close::before {
+    content: "\2716";
+    font-size: 14pt;
+    color: #ddd;
+    font-weight: normal;
+} */
+
+.addGroupBox .groupBox .groupName{
+  background-color: #fff;
+  font-size: 24rpx;
+  margin-top: 40rpx
+}
+
+.addGroupBox .groupBox .groupName input{
+  width: 300rpx;
+  height: 60rpx;
+  border: 1px solid #ddd;
+  border-radius: 5rpx;
+  margin-left: 100rpx;
+  padding-left: 30rpx;
+  font-size: 11pt;
+  box-sizing: border-box;
+}
+
+.addGroupBox .groupBox .groupPwd{
+  background-color: #fff;
+  font-size: 24rpx;
+  margin-top: 40rpx;
+}
+
+.addGroupBox .groupBox .groupPwd input{
+   width: 300rpx;
+  height: 60rpx;
+  border: 1px solid #ddd;
+  border-radius: 5rpx;
+  margin-left: 100rpx;
+  padding-left: 30rpx;
+  font-size: 11pt;
+  box-sizing: border-box;
+}
+
+.addGroupBox .groupBox .groupBtn{
+  width: 300rpx;
+  height: 70rpx;
+  text-align: center;
+  font-size: 32rpx;
+  line-height:70rpx;
+  background-color: #22d7bb;
+  margin-top: 60rpx;
+  margin-left: 100rpx;
+  border-radius: 5rpx;
+  color: #fff
+}
+
+/* .addGroupBox .groupBox .center{
+  text-align: center
+} */
+.prompt{
+  width: 300rpx;
+  height: 20rpx;
+  font-size: 9pt;
+  color: red;
+  position: absolute;
+  top: 182rpx;
+  left: 100rpx;
+}
+
+
+.shade{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.8);
+  opacity: 0.5;
+  overflow: hidden;
+}

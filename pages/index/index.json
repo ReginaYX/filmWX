@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#FE690D",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "calendar": "plugin://calendar/calendar"
+  }
+}

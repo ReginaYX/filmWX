@@ -1,0 +1,104 @@
+/* pages/group/group.wxss */
+.pageBox{
+  padding: 0 40rpx 0;
+}
+
+.topBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 150rpx;
+  width: 100%;
+  border-bottom: 2rpx solid rgba(151,151,151,0.3);
+}
+
+.topBox .inputBox{
+  width: calc(100% - 230rpx);
+  height: 70rpx;
+  background:rgba(0,0,0,0.04);
+  border-radius:40rpx;
+  position: relative;
+}
+
+.topBox .inputBox input{
+  width: 100%;
+  height: 100%;
+  font-size:28rpx;
+  padding-left: 40rpx;
+}
+
+.topBox .inputBox icon{
+  position: absolute;
+  right: 35rpx;
+  top: 0;
+  color: #ABABAB;
+  font-size: 38rpx;
+  line-height: 70rpx;
+}
+
+.topBox .addView{
+  width:200rpx;
+  height:70rpx;
+  background:rgba(254,105,13,1);
+  border-radius:60px;
+  font-size:32rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:70rpx;
+  text-align: center;
+  box-shadow: 0 1rpx 8rpx 4rpx rgba(254,105,13,0.3);
+}
+
+.groupList{
+  height: calc(100vh - 180rpx);
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.groupList .itemBox{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.groupList .itemBox .head,
+.groupList .itemBox image{
+  width:96rpx;
+  height:96rpx;
+  background:rgba(244,82,88,1);
+  border-radius:34rpx;
+  font-size:50rpx;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  line-height:96rpx;
+  text-align: center;
+}
+
+.groupList .itemBox .name{
+  width: calc(100% - 130rpx);
+  height: 100%;
+  border-bottom: 2rpx solid rgba(151,151,151,0.3);
+  padding-left: 20rpx;
+  font-size:28rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+  line-height:150rpx;
+}
+
+.groupList .null{
+  width: 100%;
+  height: 150rpx;
+  border-bottom: 2rpx solid rgba(151,151,151,0.3);
+   font-size:28rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+  line-height:150rpx;
+  text-align: center;
+}

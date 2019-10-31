@@ -1,0 +1,11 @@
+<!--pages/checkpwd/checkpwd.wxml-->
+<view class='pageBg'></view>
+<view class='pageBox'>
+<form bindsubmit="formSubmit" bindreset="formReset" class='formBox'>
+  <view class="inputBox">
+    <view class="inputTitle">登陆密码</view>
+    <input name="password" placeholder="请输入密码" confirm-type='done'  placeholder-class='inputPlaceholder' password='true' />
+  </view>
+  <button form-type="submit" class='active'>绑定新手机号</button>
+</form>
+</view>

@@ -1,0 +1,4 @@
+/* pages/updatePwd/updatePwd.wxss */
+.pageBox{
+  padding-top: 18rpx
+}

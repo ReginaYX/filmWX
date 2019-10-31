@@ -1,0 +1,40 @@
+
+/* pages/agreement/agreement.wxss */
+page{
+  background: linear-gradient(#f6ae45, #ffd393);
+  padding: 20rpx 30rpx 36rpx;
+  box-sizing: border-box;
+  height: 100vh;
+}
+.agreementBox{
+  background: #fff;
+  padding: 20rpx 30rpx 36rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  height: 100%;
+  overflow-y: scroll
+}
+.agreementBox .agreementTitle{
+  width: 320rpx;
+  height: 60rpx;
+  background: #ffd393;
+  border: 1px solid #f6ae45;
+  border-radius: 5rpx;
+  font-size: 12pt;
+  color: #333;
+  line-height: 60rpx;
+  text-align: center;
+  margin: 0 auto 20rpx;
+}
+.agreementBox  .agreementContent{
+  font-size: 11pt;
+  line-height: 48rpx;
+}
+.agreementBox  .agreementContent text:first-of-type,
+.agreementBox  .agreementContent text.agreementConnerTitle{
+  display: block;
+}
+.agreementBox  .agreementContent text.agreementConnerBr{
+  display: block;
+  margin-top: 40rpx;
+}

@@ -1,0 +1,38 @@
+/* pages/select/select.wxss */
+.pageBox{
+  padding: 50rpx 90rpx 0;
+  background: #fff;
+  border-radius: 0;
+}
+
+.headBox{
+  width:190rpx;
+  height:190rpx;
+  background:#FFE1CF;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto 100rpx;
+}
+
+.headBox icon{
+  font-size: 120rpx;
+  color: #FE690D;
+  line-height: 190rpx;
+}
+
+.formBox .projectBox{
+  font-size:28rpx;
+  color:rgba(97,97,97,1);
+  line-height:40rpx;
+  display: flex;
+  align-items: center;
+}
+
+.formBox .projectBox .projectTitle{
+  color:rgba(0,0,0,1);
+}
+
+.pickerBox .picker{
+  color: #000;
+  font-size: 30rpx;
+}

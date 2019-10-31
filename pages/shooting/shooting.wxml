@@ -1,0 +1,37 @@
+<!--shooting.wxml-->
+<wxs module="filter" src="../../utils/util.wxs"></wxs>
+<view class='shootingBg'></view>
+<view class='shootingBox'>
+<view class='shootingNum' wx:if='{{info.field_number!=undefined}}'>第{{info.field_number}}场</view>
+<view class='shootingNum' wx:else>第{{info.field_number}}场</view>
+<view class='titleBox'>
+  <view class='title'>{{info.scene_name}}  / {{info.air}}</view>
+  <view class='packUpBox' bindtap="fold">
+    收起 <icon class='iconfont iconshouqi'></icon>
+  </view>
+</view>
+<view class="otherInfoBox" style="{{open?height:'height: 0px'}}">
+  <view class='otherInfo'>
+    <view class='infoTitle'>
+      <icon class='iconfont iconnan'></icon>角色：
+    </view>
+    <view class='infoTxt' wx:if='{{info.only_role_name_list[0]!=undefined}}'>{{filter.array(info.only_role_name_list)}}</view>
+    <view class='infoTxt' wx:else>暂无角色</view>
+  </view>
+   <view class='otherInfo'>
+    <view class='infoTitle'>
+      <icon class='iconfont icondaoju'></icon>道具：
+    </view>
+    <view class='infoTxt' wx:if='{{info.tool_list[0]!=undefined}}'>{{filter.array(info.tool_list)}}</view>
+    <view class='infoTxt' wx:else>暂无道具</view>
+  </view>
+  <view class='otherInfo'>
+    <view class='infoTitle'>
+      <icon class='iconfont icon24_beizhu'></icon>备注：
+    </view>
+    <view class='infoTxt' wx:if='{{info.remark!=undefined}}'>{{info.remark}}</view>
+    <view class='infoTxt' wx:else>暂无备注</view>
+  </view>
+</view>
+<text class='contentBox'>{{info.label_end}}</text>
+</view>

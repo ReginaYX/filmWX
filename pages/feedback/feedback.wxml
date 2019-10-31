@@ -1,0 +1,15 @@
+<!--pages/feedback/feedback.wxml-->
+<view class='pageBg'></view>
+<view class='pageBox'>
+<form bindsubmit="formSubmit" bindreset="formReset" class='formBox'>
+  <view class="textareaBox">
+    <view class="inputTitle">您的意见或建议：</view>
+    <textarea name="content" placeholder="请输入反馈内容我们将不断的改进" confirm-type='next'  placeholder-class='inputPlaceholder' />
+  </view>
+  <view class="textareaBox">
+    <view class="inputTitle">邮箱或手机号：</view>
+    <input name="contact" placeholder="为了便于及时解决与反馈" confirm-type='done'  placeholder-class='inputPlaceholder' />
+  </view>
+  <button form-type="submit" class='active'>提交</button>
+</form>
+</view>

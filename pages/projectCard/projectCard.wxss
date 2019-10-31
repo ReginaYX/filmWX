@@ -1,0 +1,115 @@
+/* pages/projectCard.wxss */
+.projectBg{
+  border-radius: 20rpx 20rpx 0 0;
+  background: #fff;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.projectBox{
+  box-sizing: border-box;
+  border-radius: 20rpx 20rpx 0 0;
+  padding: 55rpx 28rpx;
+  height: 100vh;
+}
+
+.projectTitle{
+  font-size:32rpx;
+  font-weight:600;
+  color:rgba(0,0,0,1);
+  line-height:45rpx;
+  padding-left: 8rpx;
+  box-sizing: border-box;
+  margin-bottom: 10rpx;
+}
+
+.projectList{
+  height: calc(100vh - 120rpx);
+  overflow-y: scroll;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+}
+
+.projectList .projectCard{
+  height:226rpx;
+  background:rgba(255,255,255,1);
+  border-radius:4rpx;
+  box-shadow: 0 0 14rpx 4rpx rgba(108,111,192,0.1);
+  width: 98%;
+  margin: 22rpx auto 0;
+}
+
+.projectList .projectCard .projectCardTitleBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 28rpx;
+  box-sizing: border-box;
+}
+
+.projectList .projectCard .projectCardTitleBox .projectCardTitle{
+  height:38rpx;
+  border-left: 10rpx solid rgba(51,197,143,1);
+  padding-left: 28rpx;
+  box-sizing: border-box;
+  font-size:34rpx;
+  color:rgba(0,0,0,1);
+  line-height: 38rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  width: calc(100% - 180rpx);
+}
+
+.projectList .projectCard .projectCardTitleBox .projectCardTitle text{
+  font-size: 26rpx;
+  color: #FE690D
+}
+
+.projectList .projectCard .projectCardTitleBox .projectCardType{
+  width:130rpx;
+  height:42rpx;
+  background: #D6F3E9;
+  border-radius:20rpx;
+  margin-right: 28rpx;
+  font-size:24rpx;
+  color:#666;
+  line-height:42rpx;
+  text-align: center;
+}
+
+.projectList .projectCard .projectCardTitleBox .projectCardType.film{
+  background:rgba(244,82,88,0.2);
+}
+
+.projectList .projectCard .projectCardTitleBox .projectCardType.tv{
+  background:rgba(108,111,192,0.2);
+}
+
+.projectList .projectCard .projectCardMain{
+  padding: 0 28rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+
+.projectList .projectCard .projectCardMain .projectDirector{
+  font-size:28rpx;
+  color:#666;
+  line-height:40rpx;
+  margin-bottom: 20rpx;
+  padding: 0 8rpx;
+  box-sizing: border-box;
+}
+
+.projectList .projectCard .projectCardMain .projectTime{
+  font-size:26rpx;
+  color:#333;
+  line-height:38rpx;
+  border-top:2rpx solid rgba(151,151,151,0.2);
+  padding: 15rpx 8rpx 0;
+  box-sizing: border-box;
+}

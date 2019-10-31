@@ -1,0 +1,29 @@
+<!--pages/list/list.wxml-->
+<wxs module="filter" src="../../utils/util.wxs"></wxs>
+<view class='pageBg'></view>
+<view class='pageBox'>
+<view class='listTitle'>{{info.notice_name}}</view>
+<scroll-view class="listBox" scroll-y bindscrolltolower='fetchData' bindscrolltoupper='fetchData'>
+  <block wx:for='{{tableData}}' wx:key='index'>
+    <view class='timeBox' wx:if='{{item.status!="3"}}' bindtap="changeDetail" data-id='{{item.detail_id}}'>
+      <view class='dayNum wait' wx:if='{{item.status=="1"}}'><text>{{item.dayNum}}</text>天</view>
+      <view class='dayNum null' wx:elif='{{item.status=="0"}}'><text>{{item.dayNum}}</text>天</view>
+      <view class='dayNum' wx:else><text>{{item.dayNum}}</text>天</view>
+      <view class="contentBox">
+        <view class='leftBox'>
+          <view class='leftItem'><icon class="iconfont iconrili"></icon>{{filter.dateTime(item.shoot_date)}}</view>
+          <view class='leftItem' wx:if="{{item.shoot_location!=undefined}}">
+            <icon class="iconfont icondingweiweizhi"></icon>{{item.shoot_location}}
+          </view>
+          <view class='leftItem' wx:else>
+            <icon class="iconfont icondingweiweizhi"></icon>暂无拍摄地
+          </view>
+        </view>
+        <view class="status" wx:if="{{item.status == 0}}">未编辑</view>
+        <view class="status" wx:elif="{{item.status == 1}}">待发布</view>
+        <view class="status" wx:elif="{{item.status == 2}}">已发布</view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+</view>

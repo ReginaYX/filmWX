@@ -1,0 +1,24 @@
+<!--pages/select/select.wxml-->
+<view class='pageBox'>
+<view class='headBox'><icon class='iconfont iconchangci01'></icon></view>
+<form class='formBox logForm'>
+  <view class="projectBox">
+    项目名称：<text class='projectTitle'> {{project}}</text>
+  </view>
+  <view class="inputBox pickerBox">
+    <view class='inputTitle'><text>* </text>部门：</view>
+    <picker bindchange="bindPickerChange" value="{{array[index].department_id}}" range="{{array}}" range-key="{{'name'}}">
+      <view class="inputPlaceholder" wx:if='{{index==""}}'>
+        请选择部门
+      </view>
+      <view class="picker" wx:else>
+        {{array[index].name}}
+      </view>
+    </picker>
+    <icon class="iconfont iconxiala"></icon>
+  </view>
+  <button bindtap="formSubmit" class='active' wx:if='{{login}}'>下一步</button>
+  <button open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="onGotUserInfo" class='active' wx:else>下一步</button>
+</form>
+<image src="../../images/bottomBg.png" class='bottomBg' mode='widthFix'></image>
+</view>

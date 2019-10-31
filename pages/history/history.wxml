@@ -1,0 +1,16 @@
+<!--pages/history/history.wxml-->
+<view class='historyBg'></view>
+<view class='historyBox'>
+<view class='historyMain' wx:for="{{list}}">
+  <view class='historyTitle'>
+    {{item.year}}年 <text>（已加入剧组{{item.num}}个）</text>
+  </view>
+  <view class='historyItemBox' wx:for="{{item.data}}" wx:for-index="idx" wx:for-item="data">
+    <view class='circle'></view>
+    <view class='historyItemTxt'>
+      <view class='historyTime'>{{data.time}}</view>
+      <view class='historyDesc'>加入了【{{data.name}}】剧组</view>
+    </view>
+  </view>
+</view>
+</view>

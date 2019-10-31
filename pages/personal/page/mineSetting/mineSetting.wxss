@@ -1,0 +1,206 @@
+/* pages/mineSetting/mineSetting.wxss */
+.mineSettingBox{
+  background: #fff;
+}
+.mineSettingContent{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30rpx;
+  border-bottom: 1rpx solid #ddd;
+  height: 100rpx;
+  background: #fff;
+  font-size: 14pt;
+}
+.mineSettingContent:first-of-type{
+  height: 140rpx;
+}
+.mineSettingContent .mineContent{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mineSettingContent .mineContent image{
+  width: 15rpx;
+  height: 25rpx;
+  margin-right: 30rpx;
+}
+.mineSettingContent .mineContent .headPortrait{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 1rpx solid #ddd;
+  margin-right: 15rpx;
+}
+.mineSettingContent .mineContent text{
+  margin-right: 15rpx;
+  color: #999
+}
+
+
+/* 修改姓名 */
+
+.changeName{
+  z-index: 200;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.changeName .formBox{
+  position: relative;
+  width: 100%;
+  padding: 50rpx 75rpx 30rpx;
+  box-sizing: border-box;
+}
+.changeName .formBox .inputBox{
+  position: relative;
+}
+.changeName .formBox .inputBox input{
+  width: 100%;
+  height: 80rpx;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5rpx;
+  /* margin-bottom: 30rpx; */
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  font-size: 11pt;
+  color: #666;
+  line-height: 80rpx;
+}
+.changeName .formBox .inputBox:nth-of-type(2) input{
+  padding-left: 30rpx;
+}
+
+
+
+.changeName .formBox .button{
+  width: 100%;
+  height: 80rpx;
+  border-radius: 5rpx;
+  background: #22d7bb;
+  font-size: 12pt;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  letter-spacing: 8rpx;
+  margin-top: 40rpx;
+}
+
+.maskLayer{
+  position: absolute;
+  top: 14rpx;
+  right: 18rpx;
+  color: #000;
+  border-radius: 12rpx;
+  line-height: 40rpx;
+  text-align: center;
+  height: 40rpx;
+  width: 40rpx;
+  font-size: 24rpx;
+  padding: 1rpx;  
+  z-index: 210  
+}
+
+/* .maskLayer::before{
+  content: "\2716";
+  font-size: 14pt;
+  color: #ddd;
+  font-weight: normal;
+} */
+
+
+.shade{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.8);
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+
+/* 修改职位 */
+
+.changeJobs{
+  z-index: 200;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.changeJobs .formBoxPwd{
+  width: 100%;
+  padding: 50rpx 75rpx 30rpx;
+  box-sizing: border-box;
+}
+.changeJobs .formBoxPwd .inputBoxPwd{
+  position: relative;
+}
+.changeJobs .formBoxPwd .inputBoxPwd input{
+  width: 100%;
+  height: 80rpx;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5rpx;
+  margin-bottom: 30rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  font-size: 11pt;
+  color: #666;
+  line-height: 80rpx;
+}
+
+.changeJobs .formBoxPwd .inputBoxPwd .errortxt{
+  position: absolute;
+  top: 80rpx;
+  left: 0;
+  color: #fd4444;
+  font-size: 10pt;
+}
+.changeJobs .formBoxPwd .inputBoxPwd .emptyIcon{
+  position: absolute;
+  top: 0rpx;
+  right: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+  z-index: 20;
+}
+.changeJobs .formBoxPwd .inputBoxPwd .emptyIcon image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 40rpx;
+  margin-top: 22rpx;
+}
+.changeJobs .formBoxPwd .inputBoxPwd text{
+  position: absolute;
+  top: 0;
+  left: 30rpx;
+  line-height: 80rpx;
+  color: #333;
+  font-size: 11pt;
+}
+.changeJobs .formBoxPwd .inputPlaceholder{
+  font-size: 11pt;
+  color: #999;
+  line-height: 80rpx;
+}
+
+.changeJobs .formBoxPwd .button{
+  width: 100%;
+  height: 80rpx;
+  border-radius: 5rpx;
+  background: #22d7bb;
+  font-size: 12pt;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  letter-spacing: 8rpx;
+  margin-top: 80rpx;
+}

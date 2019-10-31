@@ -1,0 +1,68 @@
+/* pages/complete/complete.wxss */
+.pageBox{
+  padding: 50rpx 90rpx 0;
+  background: #fff;
+  border-radius: 0;
+}
+
+.headBox{
+  width:190rpx;
+  height:190rpx;
+  background:rgba(216,216,216,1);
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto 100rpx;
+}
+
+.headBox icon{
+  font-size: 112rpx;
+  color: #969696;
+  line-height: 190rpx;
+}
+
+.pickerBox .picker{
+  color: #000;
+  font-size: 30rpx;
+}
+
+.radioBox{
+  display: flex;
+  align-items: center;
+  margin: 50rpx 0 0;
+}
+
+.radioBox .radioTitle{
+  color: #B2B2B2;
+  font-size: 30rpx;
+}
+
+.radioBox .radio-group {
+  margin-left: 22rpx;
+  display: flex;
+  align-items: center;
+}
+
+.radioBox .radio {
+  font-size:34rpx;
+  display: flex;
+  align-items: center;
+}
+
+.radioBox .radio:last-child{
+  margin-left: 90rpx;
+}
+
+.radioBox .radio radio{
+  display: none;
+}
+
+.radioBox .radio icon{
+  margin:0 0 0 16rpx;
+  font-size: 44rpx;
+  transition: all 0.8s;
+  color: #999;
+}
+
+.radioBox .radio.active icon{
+  color: #FE690D
+}

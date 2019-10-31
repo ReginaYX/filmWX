@@ -1,0 +1,6 @@
+/* pages/forgetPwd/forgetPwd.wxss */
+.pageBox{
+  padding: 60rpx 90rpx 0;
+  background: #fff;
+  border-radius: 0;
+}

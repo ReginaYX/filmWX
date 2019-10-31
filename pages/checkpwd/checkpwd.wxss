@@ -1,0 +1,4 @@
+/* pages/checkpwd/checkpwd.wxss */
+.pageBox{
+  padding-top: 20rpx
+}

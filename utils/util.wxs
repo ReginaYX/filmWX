@@ -1,0 +1,33 @@
+
+//手机号码中间四位显示为 * 号
+var toHide = function (array) {
+  var mphone = array.substring(0, 3) + '****' + array.substring(7);
+  return mphone;
+}
+
+//数组转字符串
+var array = function (array) {
+  return array.join('，');
+}
+
+//截取第一个字符
+var substring = function (str) {
+  return str.slice(0,1);
+}
+
+//时间戳转换成日期时间
+function dateTime(unixtime) {
+  var dateTime = getDate(unixtime * 1000)
+  var year = dateTime.getFullYear();
+  var month = dateTime.getMonth() + 1;
+  var day = dateTime.getDate();
+  var timeSpanStr = year + '年' + month + '月' + day + '日';
+  return timeSpanStr
+}
+
+module.exports = {
+  toHide: toHide,//手机号码中间四位显示为*号
+  array: array,//数组转字符串
+  substring: substring,//截取第一个字符
+  dateTime: dateTime,//时间戳转日期
+}

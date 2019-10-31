@@ -1,0 +1,109 @@
+<!--index.wxml-->
+<wxs module="filter" src="../../utils/util.wxs"></wxs>
+<view class='indexPage'>
+<!-- 顶部项目信息 -->
+<view class='topDayBox'>
+  <view class='iconBox' bindtap="dateChange" data-type="before"><icon class='iconfont iconzuojiantou-copy'></icon></view>
+  <view class='dayInfo' bindtap="goList">
+    <icon class='iconfont iconrili'></icon>
+    <view>{{noticeDate.time}}\t\t\t\t\t{{noticeDate.week}}</view>
+  </view>
+  <view class='iconBox' bindtap="dateChange" data-type="after"><icon class='iconfont icongengduo1'></icon></view>
+</view>
+<!-- 空状态 -->
+<block wx:if="{{weather.temperature==undefined&&locationInfo[0].shoot_location==undefined}}">
+<view class='nullNotice'>
+  <image mode="widthFix" src="../../images/indexNull.png"></image>
+  <text>暂未收到当日通告单信息哦\n快去提醒管理人员添加吧</text>
+  <text class="link" bindtap="openVideo">快速入门非幕通告单</text>
+  <video id='myvideo' src='{{video}}' class='{{fullScreen?"show":"hide"}}' bindfullscreenchange="fullScreen"  bindended="closeVideo"></video>
+</view>
+</block>
+<block wx:else>
+<view class='indexTop'>
+  <view class='topTitle'>{{info.notice_name}}</view>
+  <view class='topRight locationBox'>
+    <icon class='iconfont icondingweiweizhi'></icon>
+    <view class='title' wx:if='{{weather.city!=undefined}}'>{{weather.city}}</view>
+     <view class='title' wx:elif='{{locationInfo[0].city!=undefined}}'>{{locationInfo[0].city}}</view>
+    <view class='title' wx:else>暂无拍摄地</view>
+  </view>
+</view>  
+<!-- 天气框 -->
+<view class='weatherBox'>
+  <image src='{{weather.bg}}' class='bg' mode="widthFix"></image>
+  <view class='skyBox'>
+    <image src='{{weather.img}}' mode="widthFix"></image>
+    <view class='skyTitle' wx:if='{{weather.temperature==undefined}}'>0 ℃</view>
+    <view class='skyTitle' wx:else>{{weather.temperature}}℃</view>
+  </view>
+  <view class='weatherRightBox'>
+    <view class='weatherInfoBox'>
+      <view class='weatherInfoItem'>
+        <view class='weatherInfoTitle'>湿度</view>
+        <view class='weatherInfoDesc' wx:if='{{weather.humidity==undefined}}'>暂无</view>
+        <view class='weatherInfoDesc' wx:else>{{weather.humidity}}%</view>
+      </view>
+      <view class='weatherInfoItem'>
+        <view class='weatherInfoTitle' wx:if='{{weather.wind_degree==undefined}}'>无风</view>
+        <view class='weatherInfoTitle' wx:else>{{weather.wind_degree}}</view>
+        <view class='weatherInfoDesc' wx:if='{{weather.wind_speed==undefined}}'>暂无</view>
+        <view class='weatherInfoDesc' wx:else>{{weather.wind_speed}}级</view>
+      </view>
+      <view class='weatherInfoItem'>
+        <view class='weatherInfoTitle'>日出</view>
+        <view class='weatherInfoDesc' wx:if='{{weather.sunrise_time==undefined}}'>暂无</view>
+        <view class='weatherInfoDesc' wx:else>{{weather.sunrise_time}}</view>
+      </view>
+      <view class='weatherInfoItem'>
+        <view class='weatherInfoTitle'>日落</view>
+        <view class='weatherInfoDesc' wx:if='{{weather.sunset_time==undefined}}'>暂无</view>
+        <view class='weatherInfoDesc' wx:else>{{weather.sunset_time}}</view>
+      </view>
+    </view>
+    <view class='dayInfo'>拍摄第{{whatDay}}天</view>
+  </view>
+</view>
+<!-- 拍摄时间 -->
+<view class='cycleBox'>
+  拍摄时间：<text>{{filter.dateTime(info.start_date)}}~{{filter.dateTime(info.end_date)}}</text>
+</view>
+<!-- 场景信息 -->
+<block wx:if='{{locationInfo[0].shoot_location!=undefined}}'>
+<view class='noticeBox' wx:for='{{locationInfo}}' wx:key="index" wx:for-item="item" >
+  <view class='noticeTitle'>{{item.shoot_location}}</view>
+  <block wx:if='{{item.play_session_list[0].scene_name!=undefined||item.play_session_list[0].session_id!=undefined}}'>
+  <view class='sceneBox' wx:for='{{item.play_session_list}}' wx:for-index="key" wx:for-item="items" 
+  bindtap="session" data-id='{{items.session_id}}' data-location='{{item.shoot_location_id}}'>
+    <view class='sceneTitle'>{{items.scene_name}} / {{items.air}}</view>
+    <view class='sceneNum' wx:if='{{items.field_number==undefined}}' style='background:{{items.color}}'>第0场</view>
+     <view class='sceneNum' wx:else style='background:{{items.color}}'>第{{items.field_number}}场</view>
+    <view class='actorBox'>
+      <icon class='iconfont iconnan'></icon>
+      <view class='actorTitle'>主要角色：
+        <text class='actorMain'>{{filter.array(items.only_role_name_list)}}</text>
+      </view>
+    </view>
+    <view class='actorBox toolBox'>
+      <icon class='iconfont icondaoju'></icon>
+      <view class='actorTitle'>道具提示：
+        <text class='actorMain'>{{filter.array(items.tool_list)}}</text>
+      </view>
+    </view>
+  </view>
+  </block>
+  <block wx:else>
+  <view class='nullBox'>
+    <icon class='iconfont iconwuxinxi'></icon>暂无当日拍摄场景
+  </view>
+  </block>
+</view>
+</block>
+<block wx:else>
+<view class='nullBox'>
+  <icon class='iconfont iconwuxinxi'></icon>暂无当日通告
+</view>
+</block>
+</block>
+
+</view>

@@ -1,0 +1,21 @@
+<!--pages/forgetPwd/forgetPwd.wxml-->
+<view class='pageBox'>
+<form bindsubmit="formSubmit" bindreset="formReset" class='formBox'>
+  <view class="inputBox">
+    <input name="account" placeholder="请输入手机或邮箱账号" confirm-type='next' type='number' placeholder-class='inputPlaceholder'
+     value="{{account}}" bindinput="accountInput"/>
+  </view>
+  <view class="inputBox">
+    <input name="code" placeholder="请输入验证码" confirm-type='next' type='number' placeholder-class='inputPlaceholder'
+     maxlength='11' />
+     <view class='inputCode' wx:if="{{codeTime != 0}}">{{codeTime}}秒后重新获取</view>
+    <view class="inputCode" bindtap="sendCode" wx:else>获取验证码</view>
+  </view>
+  <view class="inputBox">
+    <input name="password" placeholder="请设置新密码" confirm-type='done'  placeholder-class='inputPlaceholder' password='true' 
+    value="{{pwd}}" bindinput="pwdInput"/>
+  </view>
+  <button form-type="submit" class='active'>完成</button>
+</form>
+<image src="../../images/bottomBg.png" class='bottomBg' mode='widthFix'></image>
+</view>

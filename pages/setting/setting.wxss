@@ -1,0 +1,77 @@
+/* pages/setting/setting.wxss */
+.settingBg{
+  border-radius: 20rpx 20rpx 0 0;
+  background: #fff;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.settingBox{
+  box-sizing: border-box;
+  border-radius: 20rpx 20rpx 0 0;
+  padding: 55rpx 28rpx;
+  min-height: 100vh;
+}
+
+.bindingBox.phone{
+  padding-top: 46rpx;
+  border-top:3rpx solid rgba(151,151,151,0.2);
+}
+
+.bindingBox .bindingTitle{
+  font-size:30rpx;
+  color:rgba(0,0,0,1);
+  line-height:42rpx;
+}
+
+.bindingBox .bindingMainBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bindingBox .bindingMainBox .bindingTxt{
+  font-size:28rpx;
+  color: #999;
+}
+
+.bindingBox .bindingMainBox .bindingBtn{
+  width:130rpx;
+  height:60rpx;
+  border-radius:30rpx;
+  box-sizing: border-box;
+  border:2rpx solid rgba(151,151,151,0.6);
+  font-size:26rpx;
+  color: #666;
+  text-align: center;
+  line-height: 58rpx;
+}
+
+.bindingBox .bindingMainBox .bindingBtn.already{
+  background:rgba(254,105,13,1);
+  color: #fff;
+  border: none;
+  line-height: 60rpx;
+}
+
+.pwdBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28rpx 0;
+  margin-top: 12rpx;
+}
+
+.pwdBox .pwdTitle{
+  font-size:30rpx;
+  color:rgba(0,0,0,1);
+}
+
+.pwdBox icon{
+  font-size:30rpx;
+  color: #B2B2B2;
+}

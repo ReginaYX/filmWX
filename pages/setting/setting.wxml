@@ -1,0 +1,32 @@
+<!--pages/setting/setting.wxml-->
+<view class='settingBg'></view>
+<view class='settingBox'>
+<view class='bindingBox' wx:if='{{info.email!=undefined}}'>
+  <view class='bindingTitle'>绑定邮箱</view>
+  <view class='bindingMainBox'>
+    <view class='bindingTxt'>{{info.email}}</view>
+  </view>
+</view>
+<view class='bindingBox' wx:else>
+  <view class='bindingTitle'>绑定手机号</view>
+  <view class='bindingMainBox'>
+    <view class='bindingTxt' wx:if='{{info.phone!=undefined}}'>{{info.phone}}</view>
+    <view class='bindingTxt' wx:else>绑定后可提升账号防御能力</view>
+    <view class='bindingBtn' bindtap="checkPhone" wx:if='{{info.phone!=undefined}}'>修改</view>
+    <view class='bindingBtn already' bindtap="bingingPhone" wx:else>绑定</view>
+  </view>
+</view>
+<view class='pwdBox' bindtap="revisePwd">
+  <view class='pwdTitle'>修改密码</view>
+  <icon class="iconfont icongengduo1"></icon>
+</view>
+<view class='bindingBox phone' wx:if='{{info.email!=undefined}}'>
+  <view class='bindingTitle'>绑定手机号</view>
+  <view class='bindingMainBox'>
+    <view class='bindingTxt' wx:if='{{info.phone!=undefined}}'>绑定后可提升账号防御能力</view>
+    <view class='bindingTxt' wx:else>{{info.phone}}</view>
+    <view class='bindingBtn' bindtap="checkPhone" wx:if='{{info.phone!=undefined}}'>修改</view>
+    <view class='bindingBtn already' bindtap="bingingPhone" wx:else>绑定</view>
+  </view>
+</view>
+</view>

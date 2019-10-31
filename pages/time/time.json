@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {},
+  "navigationBarTitleText": "行程安排",
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,93 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/group/group",
+    "pages/invite/invite",
+    "pages/list/list",
+    "pages/projectCard/projectCard",
+    "pages/forgetPwd/forgetPwd",
+    "pages/select/select",
+    "pages/complete/complete",
+    "pages/register/register",
+    "pages/shooting/shooting",
+    "pages/notice/notice",
+    "pages/history/history",
+    "pages/mine/mine",
+    "pages/setting/setting",
+    "pages/binding/binding",
+    "pages/feedback/feedback",
+    "pages/login/login",
+    "pages/updatePwd/updatePwd",
+    "pages/checkmp/checkmp",
+    "pages/checkpwd/checkpwd",
+    "pages/time/time",
+    "pages/agreement/agreement"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "拍摄信息",
+        "iconPath": "images/tabBarIcon1.png",
+        "selectedIconPath": "images/tabBarActiveIcon1.png"
+      },
+      {
+        "pagePath": "pages/time/time",
+        "text": "日程安排",
+        "iconPath": "images/tabBarIcon2.png",
+        "selectedIconPath": "images/tabBarActiveIcon2.png"
+      },
+      {
+        "pagePath": "pages/notice/notice",
+        "text": "通告单",
+        "iconPath": "images/tabBarIcon3.png",
+        "selectedIconPath": "images/tabBarActiveIcon3.png"
+      },
+      {
+        "pagePath": "pages/group/group",
+        "text": "成员管理",
+        "iconPath": "images/tabBarIcon4.png",
+        "selectedIconPath": "images/tabBarActiveIcon4.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/tabBarIcon5.png",
+        "selectedIconPath": "images/tabBarActiveIcon5.png"
+      }
+    ],
+    "color": "#666",
+    "selectedColor": "#FE690D",
+    "backgroundColor": "#fff",
+    "borderStyle": "white"
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FE690D",
+    "navigationBarTitleText": "非幕通告",
+    "backgroundColor": "#FE690D",
+    "navigationBarTextStyle": "white"
+  },
+  "plugins": {
+    "calendar": {
+      "version": "1.1.3",
+      "provider": "wx92c68dae5a8bb046"
+    }
+  },
+  "subpackages": [
+    {
+      "root": "pages/personal/",
+      "pages": [
+        "page/mineSetting/mineSetting",
+        "page/setting/setting",
+        "page/projectCard/projectCard"
+      ]
+    }
+  ],
+  "sitemapLocation": "sitemap.json"
+}

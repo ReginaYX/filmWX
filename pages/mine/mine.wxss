@@ -1,0 +1,146 @@
+/* pages/mine/mine.wxss */
+page{
+  background: #F4F4F4;
+  padding: 0 28rpx;
+  box-sizing: border-box;
+}
+
+.bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 216rpx;
+  width: 100%;
+  background: rgba(254,105,13,1);
+  z-index: -1;
+}
+
+.mineBox{
+  height:330rpx;
+  background:rgba(255,255,255,1);
+  border-radius:10rpx;
+  margin-top: 40rpx;
+}
+
+.mineBox .mineContentBox{
+  display: flex;
+  align-items: center;
+  padding: 30rpx 28rpx;
+  box-sizing: border-box;
+}
+
+.mineBox .mineContentBox .mineHead{
+  width:120rpx;
+  height:120rpx;
+  background:rgba(244,82,88,1);
+  border-radius: 50%;
+  margin-right: 30rpx;
+  font-size:44rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 120rpx;
+}
+
+.mineBox .mineContentBox .mineInfo .mineName{
+  font-size:34rpx;
+  color:rgba(0,0,0,1);
+  line-height:48rpx;
+}
+
+.mineBox .mineContentBox .mineInfo .sexBox{
+  margin-top: 12rpx;
+  color: #747474;
+  font-size:28rpx;
+  display: flex;
+  align-items: center;
+}
+
+.mineBox .mineContentBox .mineInfo .sexBox icon{
+  font-size: 34rpx;
+  margin-top: -2rpx;
+  display: inline-block;
+  color: #6C6FC0;
+}
+
+.mineBox .mineContentBox .mineInfo .sexBox icon.iconnv{
+  color: #F45258;
+  transform:rotate(45deg);
+}
+
+.mineBox .mineItemBox{
+  padding: 0 40rpx;
+}
+
+.mineBox .mineItemBox .mineItem{
+  font-size:28rpx;
+  color:#333;
+  line-height:40rpx;
+  margin-top: 14rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.mineBox .mineItemBox .mineItem text{
+  color:rgba(0,0,0,1);
+}
+
+.mineSetBox{
+  margin-top: 28rpx;
+  height:400rpx;
+  background:rgba(255,255,255,1);
+  border-radius:10rpx;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.mineSetBox .mineSet{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80rpx;
+  padding: 0 12rpx;
+  box-sizing: border-box;
+}
+
+.mineSetBox .mineSet .setTitle{
+  display: flex;
+  align-items: center;
+  font-size:28rpx;
+  color: #000;
+}
+
+.mineSetBox .mineSet .setTitle icon{
+  font-size: 32rpx;
+  color: #6C6FC0;
+  margin: -10rpx 14rpx 0 0;
+}
+
+.mineSetBox .mineSet:nth-of-type(2) .setTitle icon{
+  color: #39BEE8;
+}
+
+.mineSetBox .mineSet:nth-of-type(3) .setTitle icon{
+  color: #FE690D;
+}
+
+.mineSetBox .mineSet:nth-of-type(4) .setTitle icon{
+  color: #33C58F;
+}
+
+.mineSetBox .mineSet:nth-of-type(5) .setTitle icon{
+  color: #F45258;
+}
+
+.mineSetBox .mineSet .enter{
+  color: #bbb;
+  font-size: 26rpx;
+  margin: -14rpx 0 0 0;
+}
+
+.mineSetBox .hr{
+  width: 100%;
+  height: 2rpx;
+  background: rgba(151,151,151,0.2);
+  margin: 12rpx 0 22rpx;
+}

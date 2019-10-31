@@ -1,0 +1,104 @@
+<!--pages/setting/setting.wxml-->
+<view class='mineBox' bindtap='toMineSetting'>
+  <view class='mineInfoBox'>
+    <view class='headPortrait'>
+      <image src='{{headPortrait}}' wx:if="{{headPortrait}}"></image>
+      <image src='../../images/headPortrait.png' wx:else></image>
+    </view>
+    <view class='mineInfo'>
+      <view class='mineName' wx:if="{{name}}">{{name}}</view>
+      <text wx:if="{{wchat}}">微信号：{{wchat}}</text>
+    </view>
+  </view>  
+  <view class='mineTo'>
+    <image src='../../images/openIcon.png'></image>
+  </view>
+</view>
+<view class='settingListBox'>
+  <view class='settingList' bindtap='chooseSezi'>
+    <image src='../../images/settingPhoneIcon.png' class='settingListIcon'></image>
+    <view class='settingContent'>
+      <text>手机号</text>
+      <image src='../../images/openIcon.png'></image>
+    </view>
+  </view>
+  <view class='settingList'>
+    <image src='../../images/settingEmailIcon.png' class='settingListIcon'></image>
+    <view class='settingContent'>
+      <text>邮箱</text>
+      <!-- <image src='../../images/openIcon.png'></image> -->
+    </view>
+  </view>
+  <view class='settingList' bindtap='GoToSettingPwd'>
+    <image src='../../images/settingPwdIcon.png' class='settingListIcon'></image>
+    <view class='settingContent'>
+      <text>密码</text>
+      <image src='../../images/openIcon.png'></image>
+    </view>
+  </view>
+</view>
+
+
+<!-- 隐藏部分手机号 -->
+
+<view class='choose' wx:if="{{chooseSize}}" animation='{{animationData}}'>
+<!-- <view class='maskLayer' wx:if="{{chooseSize}}" bindtap='hideModal'></view> -->
+<image class='maskLayer' wx:if="{{chooseSize}}" bindtap='hideModal'  src='../../images/close.png'></image>
+
+
+  <view class='formBox'>
+    <view class='inputBox'>
+      <input placeholder='请输入手机号码' type='number' confirm-type='next' placeholder-class='inputPlaceholder' maxlength='11' value='{{phone}}' bindinput='updateFormData' bindblur='sendCode' data-key='phone'></input>
+      <text>+86</text>
+      <view class='emptyIcon' wx:if='{{emptyIcon}}' bindtap='empty'>
+        <image src='../../images/emptyIcon.png' ></image>
+      </view>
+    </view>
+    <view class='inputBox'>
+      <input placeholder='请输入验证码' type='number' confirm-type='done' placeholder-class='inputPlaceholder' value='{{code}}' bindinput='updateFormData' data-key='code'></input>
+      <view class='codeBox' wx:if="{{codeTime != 0}}">{{codeTime}}秒后获取</view>
+      <view class='codeBox' bindtap="sendCode" wx:if='{{again}}'>重新获取</view>
+      <text class='errortxt' wx:if='{{error}}'>{{error}}</text>
+      <text class='errortxt tiptxt' wx:if='{{tip}}'>验证码已通过短信发送至+86 {{phone}}</text>
+    </view>
+    <view class='button' bindtap="binding">确定</view>
+  </view>
+
+</view>
+
+<view class="shade"  wx:if="{{shows}}" bindtap="closeShade"></view>
+
+<!-- 隐藏部分修改密码 -->
+
+
+<view class='changePwdBox' wx:if="{{changePwd}}" animation='{{animationData}}'>
+<image class='maskLayer' wx:if="{{changePwd}}" bindtap='hideModal'  src='../../images/close.png'></image>
+  
+  <view class='formBoxPwd'>
+
+    <view class='inputBoxPwd'>
+      <input placeholder='请输入原始密码' confirm-type='next' placeholder-class='inputPlaceholder' value='{{pwd}}' bindinput='updateFormData' data-key='pwd' password></input>
+      <view class='emptyIcon' wx:if='{{emptyIcon1}}' bindtap='empty' data-key='pwd'>
+        <image src='../../images/emptyIcon.png' ></image>
+      </view>
+    </view>
+
+    <view class='inputBoxPwd'>
+      <input placeholder='请输入新密码' confirm-type='next' placeholder-class='inputPlaceholder' value='{{pwdNew}}' bindinput='updateFormData' data-key='pwdNew' password></input>
+      <view class='emptyIcon' wx:if='{{emptyIcon1}}' bindtap='empty' data-key='pwd'>
+        <image src='../../images/emptyIcon.png' ></image>
+      </view>
+    </view>
+
+    <view class='inputBoxPwd'>
+      <input placeholder='确认密码' confirm-type='done' placeholder-class='inputPlaceholder' value='{{confirmPWD}}' bindinput='updateFormData' data-key='confirmPWD' password></input>
+      <view class='emptyIcon' wx:if='{{emptyIcon2}}' bindtap='empty' data-key='pwd'>
+        <image src='../../images/emptyIcon.png' ></image>
+      </view>
+      <text class='errortxt' wx:if='{{error}}'>{{error}}</text>
+    </view>
+    
+    <view class='button' bindtap="finish">确认</view>
+  </view>
+  
+</view>

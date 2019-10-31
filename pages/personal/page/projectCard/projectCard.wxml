@@ -1,0 +1,37 @@
+<view class='mineHistoryBox'>
+  <input placeholder='请输入剧组名称' confirm-type='search' placeholder-class='inputPlaceholder' value='{{name}}' bindinput='update' bindblur='search' data-key='name' class='bigInput'></input>
+  <image src='../../images/search.png' class='inputIcon'></image>
+  <block wx:if='{{empty}}'>
+    <view class='empty' >暂无数据</view>
+  </block>
+  <block wx:else>
+    <block  wx:for="{{project}}" wx:key="key" wx:for-index="key" wx:for-item="v" >
+        <view class='mineHistory' bindtap='addNewGroup' data-crew='{{v.crew_id}}'>
+          <image src='https://service.test.filmptn.com/files/{{v.poster_path}}' wx:if='{{v.poster_path}}'></image>
+          <image src='../../images/mineHistoryPost.png' wx:else></image>
+          <view class='HistoryInfo'>
+            <text class='mineHistoryName'>{{v.name}}</text>
+            <text class='mineHistoryDir'>导演：{{v.director}}</text>
+            <text class='mineHistoryTime'>拍摄时间：{{v.created_at}}</text>  
+          </view>   
+        </view>
+      </block>
+  </block> 
+  
+</view>
+<view class='addGroupBox' wx:if="{{addNewGroupNum==false}}">
+  <view class='groupBox'>
+    <view class='boxTitle'>
+      <image class="close" bindtap='closeGroup' src='../../images/close.png'></image>
+    </view>
+    <view class='groupPwd'>
+      <input placeholder="请输入剧组验证码" placeholder-class="center" confirm-type='done' value='{{code}}' bindinput='update' data-key='code' bindblur='join'/>
+    </view>
+    <view class='prompt' wx:if='{{error}}'>{{error}}</view>
+    <view class='groupBtn'>
+      确认
+    </view>
+  </view>
+</view>
+<!-- 遮罩 -->
+<view class="shade"  wx:if="{{shows}}" bindtap="closeShade"></view>

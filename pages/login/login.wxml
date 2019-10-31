@@ -1,0 +1,25 @@
+<!--pages/login/login.wxml-->
+<view class='pageBox'>
+<image src="../../images/logo.png" class='logo' mode='widthFix'></image>
+<view class='logoTitle'>
+  <view class='hr'></view>
+  <text>安全高效的制片管理平台</text>
+  <view class='hr'></view>
+</view>
+<form bindsubmit="formSubmit" bindreset="formReset" class='formBox logForm'>
+  <view class="inputBox">
+    <input name="account" placeholder="请输入手机/邮箱账号" confirm-type='next'  
+    placeholder-class='inputPlaceholder' value="{{account}}" bindinput="accountInput"/>
+    <icon class="iconfont iconcuohao" wx:if='{{account!=""}}' bindtap="formReset"></icon>
+  </view>
+  <view class="inputBox">
+    <input name="password" placeholder="请输入密码" confirm-type='done'  placeholder-class='inputPlaceholder' value="{{password}}" password='true'/>
+  </view>
+  <view class='descBox'>
+    <view class='registerDesc'>没有账号，立即<text bindtap="goToRegister">注册</text></view>
+    <view class='forget' bindtap="goToForget">忘记密码</view>
+  </view>
+  <button form-type="submit" class='active'>登录</button>
+</form>
+<image src="../../images/bottomBg.png" class='bottomBg' mode='widthFix'></image>
+</view>

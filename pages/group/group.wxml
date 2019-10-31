@@ -1,0 +1,24 @@
+<!--pages/group/group.wxml-->
+<view class='pageBg'></view>
+<view class='pageBox'>
+<view class='topBox'>
+  <view class='inputBox'>
+    <input maxlength="10" bindinput="bindKeyInput" placeholder="请输入成员名称" confirm-type='done' value="{{search}}" 
+    bindblur="searchMember" bindconfirm="searchMember"/>
+    <icon class='iconfont iconsousuo'></icon>
+  </view>
+  <view class="addView" bindtap="toAdd">添加成员</view>
+</view>
+<view class='groupList'>
+<block wx:if='{{groupList[0].user_id!=undefined}}'>
+  <view class="itemBox" wx:for='{{groupList}}' wx:key="index" wx:for-item="item">
+    <image wx:if='{{item.profile_picture!=undefined}}' src="{{item.profile_picture}}"></image>
+    <view class="head" wx:else>{{item.name}}</view>
+    <view class="name">{{item.name}}</view>
+  </view>
+</block>
+<block wx:else>
+  <view class="null">暂无成员</view>
+</block>
+</view>
+</view>

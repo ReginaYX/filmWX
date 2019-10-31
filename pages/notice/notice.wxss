@@ -1,0 +1,8 @@
+/* pages/notice/notice.wxss */
+.pageBox{
+  padding: 20rpx 0;
+}
+
+image{
+  width: 100vw
+}

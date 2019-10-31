@@ -1,0 +1,25 @@
+<!--pages/projectCard.wxml-->
+<wxs module="filter" src="../../utils/util.wxs"></wxs>
+<view class='projectBg'></view>
+<view class='projectBox'>
+<view class='projectTitle'>我的剧组<text>（{{length}}个）</text></view>
+<view class='projectList'>
+  <block wx:for="{{list}}" wx:key='index'>
+  <view class='projectCard' bindtap="changeProject" data-id="{{item.project_id}}">
+    <view class='projectCardTitleBox'>
+      <view class='projectCardTitle'>{{item.project_name}}<text wx:if='{{i==index}}'>（当前项目）</text></view>
+      <view class='projectCardType film' wx:if='{{item.type_name=="电影"}}'>电影</view>
+      <view class='projectCardType tv' wx:elif='{{item.type_name=="电视剧"}}'>电视剧</view>
+      <view class='projectCardType' wx:else>{{item.type_name}}</view>
+    </view>
+    <view class='projectCardMain'>
+      <view class='projectDirector'>导演：{{item.director}}</view> 
+      <view class='projectTime' wx:if='{{item.start_date!=undefined}}'>
+        拍摄时间：{{filter.dateTime(item.start_date)}}～{{filter.dateTime(item.end_date)}}
+      </view>
+       <view class='projectTime' wx:else>拍摄时间：暂无</view>
+    </view>
+  </view>
+  </block>
+</view>
+</view>

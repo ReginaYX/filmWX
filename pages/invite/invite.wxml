@@ -1,0 +1,13 @@
+<!--pages/invite/invite.wxml-->
+<view class='pageBg'></view>
+<view class='pageBox'>
+<view class='title'>邀请成员扫码，完成添加</view>
+<view class='codeBox'>
+  <image src='{{code[0]}}'></image>
+</view>
+<view class='shareBox' bindtap="imageShare">
+  <view class='left'>分享至好友</view>
+  <icon class='iconfont icongengduo1'></icon>
+</view>
+<text class='desc'>成员邀请说明：\n1.将二维码发送给成员或者群组，扫描注册后即可加入你的团队\n2.通过扫码进入该剧组成员，将默认为其配置“普通成员”的权限\n3.扫码加入后的成员同时享有该项目在pc端的“成员”权限</text>
+</view>

@@ -1,0 +1,39 @@
+<!--pages/complete/complete.wxml-->
+<view class='pageBox'>
+<view class='headBox'><icon class='iconfont iconnan'></icon></view>
+<form bindsubmit="formSubmit" bindreset="formReset" class='formBox logForm'>
+  <!-- <view class="inputBox">
+    <view class='inputTitle'><text>* </text>项目名称：</view>
+    <input placeholder="" confirm-type='next'  placeholder-class='inputPlaceholder' value="{{project}}" disabled='true'/>
+  </view>
+  <view class="inputBox pickerBox">
+    <view class='inputTitle'><text>* </text>部门：</view>
+    <picker bindchange="bindPickerChange" value="{{array[index].department_id}}" range="{{array}}" range-key="{{'name'}}">
+      <view class="inputPlaceholder" wx:if='{{index==""}}'>
+        请选择部门
+      </view>
+      <view class="picker" wx:else>
+        {{array[index].name}}
+      </view>
+    </picker>
+    <icon class="iconfont iconxiala"></icon>
+  </view> -->
+  <view class="inputBox">
+    <view class='inputTitle'><text>* </text>昵称：</view>
+    <input name="name" placeholder="请输入昵称" confirm-type='done'  placeholder-class='inputPlaceholder' />
+  </view>
+  <view class='radioBox'>
+    <view class='radioTitle'>选择性别：</view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="{{sex==1?'active radio':'radio'}}">
+        <radio value="1" checked="true"/>男 <icon class='iconfont iconnan2'></icon>
+      </label>
+      <label class="{{sex==2?'active radio':'radio'}}">
+        <radio value="2"/>女 <icon class='iconfont iconnv'></icon>
+      </label>
+    </radio-group>
+  </view>
+  <button form-type="submit" class='active'>完成</button>
+</form>
+<image src="../../images/bottomBg.png" class='bottomBg' mode='widthFix'></image>
+</view>
